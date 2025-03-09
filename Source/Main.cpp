@@ -4,6 +4,7 @@
 #include <Tower/Managers/InputManager.hpp>
 #include <Tower/Managers/ShaderManager.hpp>
 #include <Tower/Managers/TextureManager.hpp>
+#include <Tower/Managers/MapManager.hpp>
 
 #include <GLFW/glfw3.h>
 
@@ -22,11 +23,9 @@ int main(void)
         return 1;
     }
 
-    Tower::p_InputManager inputManager = Tower::InputManager::Instance();
-
     //
     // Set up any Input Bindings here
-    // 
+    //
 
     //
     // Initialize shaders
@@ -38,8 +37,7 @@ int main(void)
     //
     // Initialize Textures
     //
-
-
+Tower::TextureManager::Instance()->LoadTexture("the_zipper", "..\\..\\Assets\\TheZipper\\Zipper_texture.png");
 
 
     while (!Tower::Director::Instance()->ShouldProgramClose())
