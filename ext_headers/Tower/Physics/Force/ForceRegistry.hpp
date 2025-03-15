@@ -33,10 +33,10 @@ namespace Tower
 
         void Clear(void);
 
-        void UpdateForces(void);
+        void ApplyForces(void);
 
     private:
-        struct _ParticleForceRegistration 
+        struct _ParticleForceRegistration
         {
             p_Particle body;
             p_ForceGenerator forceGen;

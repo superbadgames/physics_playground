@@ -6,6 +6,8 @@ for physics.
 
 For instance, it has the Update function that every Particle needs to have called on it.
 
+The Physics System is a singleton. There shouldn't be competing version of physics.
+
 */
 #pragma once
 
@@ -19,11 +21,19 @@ namespace Tower
     class PhysicsSystem
     {
     public:
-        PhysicsSystem(void);
-
         ~PhysicsSystem(void);
 
+        static shared_ptr<PhysicsSystem> Instance(void);
+
+        void Update(F32 delta);
+
+        inline const ForceRegistry& AccessForceRegistry(void) { return _forceRegistry; }
+
     private:
+        static shared_ptr<PhysicsSystem> _instance;
         ForceRegistry _forceRegistry;
+
+        PhysicsSystem(void);
     };
+    typedef shared_ptr<PhysicsSystem> p_PhysicsSystem;
 }

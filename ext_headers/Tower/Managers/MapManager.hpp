@@ -29,10 +29,16 @@ namespace Tower
 
         void Remove(const string& name);
 
+        void SetActiveMap(const string& name);
+
+        void UpdateActiveMap(F32 delta);
+
+        void RenderActiveMap(void);
+
     private:
         static shared_ptr<MapManager> _instance;
-        shared_ptr<I_Map> _activeMap;
-        std::map<string, shared_ptr<I_Map>> _maps;
+        p_Map _activeMap;
+        std::map<string, p_Map> _maps;
 
         MapManager(void);
     };

@@ -10,6 +10,7 @@
 #include "Tower/Managers/TextureManager.hpp"
 #include "Tower/Managers/ShaderManager.hpp"
 #include "Tower/Managers/MapManager.hpp"
+#include "Tower/Systems/PhysicsSystem.hpp"
 
 #include <glm/gtc/matrix_transform.hpp>
 

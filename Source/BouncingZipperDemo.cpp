@@ -18,12 +18,17 @@ void BouncingZipperDemo::v_Init(void)
 
 }
 
-void BouncingZipperDemo::v_Update(void)
+void BouncingZipperDemo::v_Update(F32 delta)
 {
 
 }
 
 void BouncingZipperDemo::v_Render(void)
+{
+
+}
+
+void BouncingZipperDemo::v_HandleInput(void)
 {
 
 }

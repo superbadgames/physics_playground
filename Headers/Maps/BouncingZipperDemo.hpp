@@ -19,9 +19,11 @@ namespace PhysicsDemo
 
         void v_Init(void) final;
 
-        void v_Update(void) final;
+        void v_Update(F32 delta) final;
 
         void v_Render(void) final;
+
+        void v_HandleInput(void) final;
 
     private:
     };
